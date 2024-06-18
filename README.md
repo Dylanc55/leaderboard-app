@@ -6,7 +6,6 @@ App for practicing React & TypeScript
 
 A leaderboard where Popular Destinations are ranked and their points are updated in real time.
 
-### `npm start`
+### `npm run start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode.
