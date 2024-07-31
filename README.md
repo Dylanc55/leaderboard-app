@@ -6,6 +6,6 @@ App for practicing React & TypeScript
 
 A leaderboard where Popular Destinations are ranked and their points are updated in real time.
 
-### `npm run start`
+### `npm run dev`
 
 Runs the app in the development mode.
