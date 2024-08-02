@@ -32,7 +32,10 @@ const LocationItem: React.FC<LocationItemProps> = ({
   }, [item, pointsRange, frequencyRange, onUpdateItem]);
 
   return (
-    <li className="location-item" style={{ top: `${(position - 1) * 64}px` }}>
+    <li
+      className="location-item"
+      style={{ transform: `translateY(${(position - 1) * 64}px)` }}
+    >
       <span className="item-position">{position}</span>
       <img src={item.image.src} alt={item.image.alt} />
       <span className="item-title">{item.title}</span>

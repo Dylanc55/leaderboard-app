@@ -17,9 +17,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({
 }) => {
   const [items, setItems] = useState<LocationModel[]>(initialLocations);
 
-  const handleUpdateItems = useCallback(function handleUpdateItems(
-    item: LocationModel
-  ) {
+  const handleUpdateItems = useCallback((item: LocationModel) => {
     setItems((prev) => {
       return prev
         .map((obj) => {
@@ -28,8 +26,7 @@ const Leaderboard: React.FC<LeaderboardProps> = ({
         })
         .sort((a, b) => b.points - a.points);
     });
-  },
-  []);
+  }, []);
 
   return (
     <section id="leaderboard">
