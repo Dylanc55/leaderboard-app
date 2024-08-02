@@ -34,7 +34,7 @@ header h1 {
 .location-item {
   @apply flex items-center justify-evenly w-full;
   @apply p-2 bg-blue-100 text-amber-950 font-semibold rounded-lg;
-  @apply absolute top-0 h-[56px] w-[448px] transition-transform duration-1000 ease-in-out;
+  @apply absolute top-0 h-[56px] transition-transform duration-1000 ease-in-out;
 }
 
 .location-item .item-position {
