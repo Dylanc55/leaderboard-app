@@ -20,16 +20,21 @@ header h1 {
 }
 
 #leaderboard {
-  @apply w-full max-w-lg p-8 mx-auto rounded-lg shadow-custom bg-custom-gradient text-white;
+  @apply w-full h-[760px] max-w-lg p-8 mx-auto rounded-lg shadow-custom bg-custom-gradient text-white;
 }
 
 #leaderboard h3 {
   @apply text-2xl mb-8 text-center;
 }
 
+#leaderboard ul {
+  @apply absolute h-[632px];
+}
+
 .location-item {
   @apply flex items-center justify-evenly w-full;
-  @apply mb-2 p-2 bg-blue-100 text-amber-950 font-semibold rounded-lg animate-slide-in;
+  @apply p-2 bg-blue-100 text-amber-950 font-semibold rounded-lg;
+  @apply absolute top-0 h-[56px] w-[448px] transition-all duration-1000;
 }
 
 .location-item .item-position {

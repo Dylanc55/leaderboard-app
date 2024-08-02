@@ -2,10 +2,12 @@ import React, { useRef } from "react";
 
 import RangeModel from "../models/Range";
 
-const PointsRange: React.FC<{
+interface PointsRangeProps {
   range: RangeModel;
   onSetRange: (range: RangeModel) => void;
-}> = ({ range, onSetRange }) => {
+}
+
+const PointsRange: React.FC<PointsRangeProps> = ({ range, onSetRange }) => {
   const minRangeInput = useRef<HTMLInputElement>(null);
   const maxRangeInput = useRef<HTMLInputElement>(null);
 

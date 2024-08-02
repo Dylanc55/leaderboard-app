@@ -2,10 +2,15 @@ import React, { useRef } from "react";
 
 import RangeModel from "../models/Range";
 
-const FrequencyRange: React.FC<{
+interface FrequencyRangeProps {
   range: RangeModel;
   onSetRange: (range: RangeModel) => void;
-}> = ({ range, onSetRange }) => {
+}
+
+const FrequencyRange: React.FC<FrequencyRangeProps> = ({
+  range,
+  onSetRange,
+}) => {
   const minRangeInput = useRef<HTMLInputElement>(null);
   const maxRangeInput = useRef<HTMLInputElement>(null);
 

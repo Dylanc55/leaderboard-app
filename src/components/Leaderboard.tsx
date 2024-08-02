@@ -6,10 +6,15 @@ import RangeModel from "../models/Range";
 
 import LocationItem from "./LocationItem";
 
-const Leaderboard: React.FC<{
+interface LeaderboardProps {
   pointsRange: RangeModel;
   frequencyRange: RangeModel;
-}> = ({ pointsRange, frequencyRange }) => {
+}
+
+const Leaderboard: React.FC<LeaderboardProps> = ({
+  pointsRange,
+  frequencyRange,
+}) => {
   const [items, setItems] = useState<LocationModel[]>(initialLocations);
 
   const handleUpdateItems = useCallback(function handleUpdateItems(

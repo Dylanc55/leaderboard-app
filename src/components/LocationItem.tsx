@@ -5,13 +5,21 @@ import RangeModel from "../models/Range";
 
 import getRandomWithinRange from "../helpers/getRandomWithinRange";
 
-const LocationItem: React.FC<{
+interface LocationItemProps {
   item: LocationModel;
   position: number;
   pointsRange: RangeModel;
   frequencyRange: RangeModel;
   onUpdateItem: (item: LocationModel) => void;
-}> = ({ item, position, pointsRange, frequencyRange, onUpdateItem }) => {
+}
+
+const LocationItem: React.FC<LocationItemProps> = ({
+  item,
+  position,
+  pointsRange,
+  frequencyRange,
+  onUpdateItem,
+}) => {
   useEffect(() => {
     const interval = setInterval(() => {
       onUpdateItem({
@@ -20,13 +28,11 @@ const LocationItem: React.FC<{
       });
     }, getRandomWithinRange(frequencyRange) * 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, [item, pointsRange, frequencyRange, onUpdateItem]);
 
   return (
-    <li className="location-item">
+    <li className="location-item" style={{ top: `${(position - 1) * 64}px` }}>
       <span className="item-position">{position}</span>
       <img src={item.image.src} alt={item.image.alt} />
       <span className="item-title">{item.title}</span>
@@ -34,5 +40,4 @@ const LocationItem: React.FC<{
     </li>
   );
 };
-
 export default LocationItem;
