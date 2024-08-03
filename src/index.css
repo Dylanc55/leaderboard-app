@@ -8,11 +8,11 @@ body {
 
 header {
   @apply flex flex-col items-center justify-center;
-  @apply my-8 md:mb-16;
+  @apply my-8 md:mb-12;
 }
 
 header img {
-  @apply object-contain w-16 h-16 mb-8 md:w-32 md:h-32 md:mb-16;
+  @apply object-contain w-16 h-16 mb-4 md:w-32 md:h-24 md:mb-8;
 }
 
 header h1 {
@@ -50,7 +50,7 @@ header h1 {
 }
 
 #actions {
-  @apply w-full max-w-lg py-4 px-8 mx-auto flex gap-4;
+  @apply w-full mt-4 max-w-lg py-4 px-8 mx-auto flex gap-4;
 }
 
 form {

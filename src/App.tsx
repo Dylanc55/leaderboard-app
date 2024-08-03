@@ -16,8 +16,8 @@ const App: React.FC = () => {
     min: number;
     max: number;
   }>({
-    min: 1,
-    max: 5,
+    min: 2,
+    max: 8,
   });
 
   function handlePointsRange(range: RangeModel) {
