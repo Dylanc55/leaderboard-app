@@ -8,7 +8,8 @@ export default {
           "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
       },
       backgroundImage: {
-        "custom-gradient": "linear-gradient(180deg, #474232 0%, #28271c 100%)",
+        "custom-gradient":
+          "linear-gradient(0deg, rgba(34,193,195,0.6) 0%, rgba(253,187,45,0.6) 100%)",
       },
       keyframes: {
         "slide-in": {

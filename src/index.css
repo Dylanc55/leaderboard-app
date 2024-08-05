@@ -24,7 +24,7 @@ header h1 {
 }
 
 #leaderboard h3 {
-  @apply text-2xl mb-8 text-center;
+  @apply text-2xl mb-8 text-center text-blue-950;
 }
 
 #leaderboard ul {
