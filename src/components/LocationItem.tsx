@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import LocationModel from "../models/Location";
 import RangeModel from "../models/Range";
@@ -20,6 +20,18 @@ const LocationItem: React.FC<LocationItemProps> = ({
   frequencyRange,
   onUpdateItem,
 }) => {
+  const [transform, setTransform] = useState<string>(
+    `translateY(${(position - 1) * 64}px)`
+  );
+
+  useEffect(() => {
+    const newTransform = `translateY(${(position - 1) * 64}px)`;
+
+    requestAnimationFrame(() => {
+      setTransform(newTransform);
+    });
+  }, [position]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       onUpdateItem({
@@ -32,10 +44,7 @@ const LocationItem: React.FC<LocationItemProps> = ({
   }, [item, pointsRange, frequencyRange, onUpdateItem]);
 
   return (
-    <li
-      className="location-item"
-      style={{ transform: `translateY(${(position - 1) * 64}px)` }}
-    >
+    <li className="location-item" style={{ transform }}>
       <span className="item-position">{position}</span>
       <img src={item.image.src} alt={item.image.alt} />
       <span className="item-title">{item.title}</span>

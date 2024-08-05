@@ -30,7 +30,7 @@ const FrequencyRange: React.FC<FrequencyRangeProps> = ({
   }
   return (
     <form onSubmit={handleFormSubmit}>
-      <h3>Frequency Range (seconds)</h3>
+      <h3>Frequency Range (s)</h3>
 
       <p>
         <label htmlFor="frequencyRangeMin">Min</label>
